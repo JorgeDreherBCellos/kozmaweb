@@ -10,18 +10,23 @@
 .layout-css {
     width: 100%;
     height: 100%;
-    align-content: center;
-    justify-content: center;
     border: none;
     border-radius: 10px;
-    box-sizing: border-box;
-    background-color: azure;
+    background-color: rgb(213, 221, 221);
 }
 
 .header-css {
-    width: 100%;
-    background-color: azure;
+    width: 90%;
+    background-color: rgb(213, 221, 221);;
     display: flex;
+    font-size: 26px;
+}
+
+.header-css2 {
+    width: 90%;
+    background-color: rgb(213, 221, 221);;
+    display: flex;
+    font-size: 26px;
 }
 
 .content-css {
@@ -33,7 +38,7 @@
     font-size: 15px;
     border: none;
     border-radius: 10px;
-    color:#333;
+    color:rgb(227, 228, 235);
 
     line-height: 1.2;
 
@@ -45,7 +50,7 @@
     width: 20%;
     height: 30px;
     cursor: pointer;
-    background-color: rgb(32, 230, 65);
+    background-color: rgb(68, 68, 68);
 }
 .buttom-alg {
     display: flex;
@@ -58,4 +63,24 @@
     justify-content: 'center';
     display: flex;
     font-size: 16px;
+    background-color: rgb(213, 221, 221);
+}
+
+.txt3 {
+    font-size: 16px;
+    color: rgb(8, 8, 8);
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: right;
+    margin-left: 5%;
+}
+
+.painel {
+    margin-left: 25%;
+}
+
+.painel-position {
+    width: 10%;
+    display: flex;
+
 }

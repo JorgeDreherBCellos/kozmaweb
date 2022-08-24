@@ -1,10 +1,12 @@
 import 'antd/dist/antd.min.css'
-
-import { Table, Modal, Input, Breadcrumb, Layout, Menu } from "antd";
+import { Table, Modal, Input, Layout, Menu } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import '../ChangeDate/styles.css'
+import { Link } from 'react-router-dom'
 const { Header, Content, Footer } = Layout;
+
+
 
 function ChangeDateTeste() {
     const [isEditing, setIsEditing] = useState(false)
@@ -36,6 +38,7 @@ function ChangeDateTeste() {
         },
 
     ])
+    
     const columns = [
         {
             key: '1',
@@ -76,13 +79,13 @@ function ChangeDateTeste() {
           } 
         },
     ]
-    const onAddUser = () => {
+    const onAddUser = (record) => {
         const randomNumber = parseInt(Math.random() * 1000)
         const newUser = {
             id: randomNumber,
             name: "Name" + randomNumber,
             email: randomNumber + '@gmail.com',
-            address: randomNumber
+            address: 'Address' + randomNumber
         }
         setDataSource((pre) => {
             return [...pre, newUser]
@@ -116,8 +119,11 @@ function ChangeDateTeste() {
     return (
         <Layout className="layout-css">
             <Header className='header-css'>
-                <div className='header-css'>
-                <text>Painel Administrador</text>
+                <div className='header-css2'>
+                <text  className='painel'>Painel Administrador</text>
+                </div>
+                <div className="painel-position">
+                <Link className="txt3" to="/">Painel Usuário</Link>
                 </div>
             </Header>
 
@@ -171,8 +177,10 @@ function ChangeDateTeste() {
                         }}
                         />
                     </Modal>
+
+
         </Content>
-        <Footer footer-position='footer-position'>
+        <Footer className='footer-css'>
             <div className='footer-css'>Teste Footer</div>
         </Footer>
         </Layout>
