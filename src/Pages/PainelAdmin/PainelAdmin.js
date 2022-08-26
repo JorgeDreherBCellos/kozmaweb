@@ -2,11 +2,9 @@ import 'antd/dist/antd.min.css'
 import { Table, Modal, Input, Layout, Menu } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
-import '../ChangeDate/styles.css'
+import '../PainelAdmin/styles.css'
 import { Link } from 'react-router-dom'
 const { Header, Content, Footer } = Layout;
-
-
 
 function ChangeDateTeste() {
     const [isEditing, setIsEditing] = useState(false)
@@ -79,18 +77,14 @@ function ChangeDateTeste() {
           } 
         },
     ]
-    const onAddUser = (record) => {
-        const randomNumber = parseInt(Math.random() * 1000)
-        const newUser = {
-            id: randomNumber,
-            name: "Name" + randomNumber,
-            email: randomNumber + '@gmail.com',
-            address: 'Address' + randomNumber
+    const onAddUser = () => {
+        Modal.confirm({
+            title: 'Criar Usuário',
+            okText: 'Sim',
+            cancelText: 'Não',
+            })
+            
         }
-        setDataSource((pre) => {
-            return [...pre, newUser]
-        })
-    }
 
     const onDelete=(record)=>{
         Modal.confirm({
@@ -137,6 +131,7 @@ function ChangeDateTeste() {
                 pagination={{ position: ["bottomRight"]}}
                 
                 ></Table>
+
                     <Modal
                     title= "Editar usuário"
                     okText= 'Sim'
@@ -177,7 +172,6 @@ function ChangeDateTeste() {
                         }}
                         />
                     </Modal>
-
 
         </Content>
         <Footer className='footer-css'>

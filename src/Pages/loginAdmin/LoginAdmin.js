@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import kozmalogin from '../../assets/kozmalogin.png'
-import '../Home/styles.css'
 import { Route, Link } from 'react-router-dom'
 
 
@@ -40,7 +39,7 @@ function App() {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+            <Link className="login-form-btn"  to="/painelAdmin"><button className="login-form-btn" >Login</button></Link>
             </div>
 
             <div className="text-center">
